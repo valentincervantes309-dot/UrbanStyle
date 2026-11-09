@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UrbanStyle</title>
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <h1>UrbanStyle</h1>
+    <input type="text" id="buscador" placeholder="Buscar ropa...">
+</header>
+
+<section id="carrito">
+    <h2>🛒 Carrito</h2>
+    <ul id="listaCarrito"></ul>
+    <p id="total"></p>
+    <button onclick="enviarWhatsApp()">Enviar pedido</button>
+</section>
+
+<div class="contenedor">
+    
+    <aside>
+        <h2>Filtros</h2>
+
+        <label>Categoría</label>
+        <select id="categoria">
+            <option value="todos">Todos</option>
+            <option value="playera">Playeras</option>
+            <option value="pantalon">Pantalones</option>
+            <option value="gorras">Gorras</option>
+        </select>
+
+        <label>Precio máximo</label>
+        <input type="range" id="precio" min="0" max="2000" step="100">
+        <span id="valorPrecio"></span>
+    </aside>
+
+    <main id="productos"></main>
+
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img id="modal-img-principal">
+        <div id="galeria"></div>
+        <h2 id="modal-nombre"></h2>
+        <p id="modal-precio"></p>
+        <p id="modal-desc"></p>
+        <label>Talla:</label>
+        <select id="modal-talla"></select>
+        <button id="btnAgregarModal">Agregar al carrito</button>
+    </div>
+</div>
+    <script src="productos.js"></script>
+</body>
+</html>
